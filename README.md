@@ -1,6 +1,6 @@
 # Установка
 
-git submodule add https://github.com/your-username/docker-starter.git docker
+git submodule add https://github.com/DanyaErezer/docker-starter.git docker-starter
 git submodule update --init --recursive
 
 ## Комит
