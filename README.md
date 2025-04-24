@@ -5,7 +5,7 @@ git submodule update --init --recursive
 
 ## Комит
 
-git add .gitmodules docker
+git add .gitmodules docker-starter
 git commit -m "Feature: Подключил модуль докер"
 git push
 
