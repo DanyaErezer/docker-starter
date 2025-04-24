@@ -2,7 +2,7 @@ up:
 	docker compose up -d --build
 
 down:
-	docker compose down -v
+	docker compose down
 
 rebuild: down up
 
@@ -20,3 +20,7 @@ bash:
 
 logs:
 	docker compose logs -f
+# ⚠️ УДАЛЯЕТ volume БД. Используй ТОЛЬКО на dev!
+down-hard:
+	@echo "⚠️  ВНИМАНИЕ! Эта команда УДАЛИТ все данные из БД!"
+	@read -p "Точно хочешь продолжить? (yes/NO): " confirm && [ "$$confirm" = "yes" ] && docker compose down -v || echo "Отмена."
